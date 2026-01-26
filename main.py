@@ -2,8 +2,8 @@ def caesar(text, shift):
     if not isinstance(shift, int):#Error Handling if shift is not an integer
         return 'Shift must be an integer value.'
     
-    if shift < 1:#error handling if shift variable is negative
-        return 'Shift must be a positive integer'
+    if shift < 1 or shift > 25:#error handling if shift variable is negative
+        return 'Shift must be an integer between 1 and 25'
 
     alphabet = "abcdefghijklmnopqrstuvwxyz"
     shifted_alphabet = (alphabet[shift:]) + alphabet[:shift] 
